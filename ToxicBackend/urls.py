@@ -29,7 +29,7 @@ schema_view = swagger_get_schema_view(
 )
 
 urlpatterns = [
-    path("api/v1/core", include("core.urls")),
+    path("api/v1/core/", include("core.urls")),
     path("api/v1/swagger", schema_view.with_ui("swagger")),
     path('admin/', admin.site.urls),
 ]

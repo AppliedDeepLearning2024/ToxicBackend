@@ -16,6 +16,12 @@ class InferenceModel(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+        }
 
 class Prediction(models.Model):
     chemical = models.ForeignKey(Chemical, on_delete=models.CASCADE)
